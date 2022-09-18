@@ -8,13 +8,12 @@ namespace EmployeeWages
 {
     public class Program
     {
+        public const int FullTime = 1;
+        public const int PartTime = 2;
+        public const int EmpRatePerHour = 100;
+        public const int NumOfWorkingDays = 20;
         static void Main(string[] args)
         {
-            int FullTime = 1;
-            int PartTime = 2;
-            int EmpRatePerHour = 100;
-            int NumOfWorkingDays = 20;
-
             int EmpHrs = 0;
             int EmpWages = 0;
             int TotalEmpWage = 0;
