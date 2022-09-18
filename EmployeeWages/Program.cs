@@ -20,20 +20,20 @@ namespace EmployeeWages
             Random random = new Random();
             int empCheck = random.Next(0, 3);
 
-            if (empCheck == FullTime)
+            switch (empCheck)
             {
-                EmpHrs = 8;
-                Console.WriteLine("Employee type is Full time.");
-            }
-            else if (empCheck == PartTime)
-            {
-                EmpHrs = 4;
-                Console.WriteLine("Employee type is Part time.");
-            }
-            else
-            {
-                EmpHrs = 0;
-                Console.WriteLine("Employee is absent.");
+                case FullTime:
+                    EmpHrs = 8;
+                    Console.WriteLine("Employee type is Full time.");
+                    break;
+                case PartTime:
+                    EmpHrs = 4;
+                    Console.WriteLine("Employee type is Part time.");
+                    break;
+                default:
+                    EmpHrs = 0;
+                    Console.WriteLine("Employee is absent.");
+                    break;
             }
 
             EmpWages = EmpHrs * EmpRatePerHour;
