@@ -11,18 +11,28 @@ namespace EmployeeWages
         static void Main(string[] args)
         {
             int FullTime = 1;
-            Random random = new Random();
+            int EmpRatePerHour = 20;
 
+            int EmpHrs = 0;
+            int EmpWages = 0;
+
+            Random random = new Random();
             int empCheck = random.Next(0, 2);
+
             if (empCheck == FullTime)
             {
-                Console.WriteLine("Employee is Present.");
+                EmpHrs = 8;
+                Console.WriteLine("Employee type is Full time.");
             }
             else
             {
-                Console.WriteLine("Employee is Absent.");
+                EmpHrs = 0;
+                Console.WriteLine("Employee is absent.");
             }
-            Console.Read();
+
+            EmpWages = EmpHrs * EmpRatePerHour;
+            Console.WriteLine("Employee wage is {0}.", EmpWages);
+            Console.ReadLine();
         }
     }
 }
