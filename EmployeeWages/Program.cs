@@ -12,32 +12,39 @@ namespace EmployeeWages
         {
             int FullTime = 1;
             int PartTime = 2;
-            int EmpRatePerHour = 20;
+            int EmpRatePerHour = 100;
+            int NumOfWorkingDays = 20;
 
             int EmpHrs = 0;
             int EmpWages = 0;
+            int TotalEmpWage = 0;
 
-            Random random = new Random();
-            int empCheck = random.Next(0, 3);
-
-            switch (empCheck)
+            for (int day = 1; day < NumOfWorkingDays; day++)
             {
-                case FullTime:
-                    EmpHrs = 8;
-                    Console.WriteLine("Employee type is Full time.");
-                    break;
-                case PartTime:
-                    EmpHrs = 4;
-                    Console.WriteLine("Employee type is Part time.");
-                    break;
-                default:
-                    EmpHrs = 0;
-                    Console.WriteLine("Employee is absent.");
-                    break;
-            }
+                Random random = new Random();
+                int empCheck = random.Next(0, 3);
 
-            EmpWages = EmpHrs * EmpRatePerHour;
-            Console.WriteLine("Employee wage is {0}.", EmpWages);
+                switch (empCheck)
+                {
+                    case FullTime:
+                        EmpHrs = 8;
+                        Console.WriteLine("Employee type is Full time.");
+                        break;
+                    case PartTime:
+                        EmpHrs = 4;
+                        Console.WriteLine("Employee type is Part time.");
+                        break;
+                    default:
+                        EmpHrs = 0;
+                        Console.WriteLine("Employee is absent.");
+                        break;
+                }
+
+                EmpWages = EmpHrs * EmpRatePerHour;
+                TotalEmpWage += EmpWages;
+                Console.WriteLine("Employee wage is {0}.", EmpWages);
+            }
+            Console.WriteLine("Total Employee Wage is {0}.",TotalEmpWage);
             Console.ReadLine();
         }
     }
