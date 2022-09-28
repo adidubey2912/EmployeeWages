@@ -10,12 +10,10 @@ namespace EmployeeWages
     {
         static void Main(string[] args)
         {
-            EmpWageBuilderObject DMart = new EmpWageBuilderObject("DMart", 20, 10, 28);
-            EmpWageBuilderObject BigBazar = new EmpWageBuilderObject("Big Bazar", 15, 5, 20 );
-            DMart.ComputeEmpWage();
-            Console.WriteLine(DMart.toString());
-            BigBazar.ComputeEmpWage();
-            Console.WriteLine(BigBazar.toString());
+            EmpWageBuilderArray empWageBuilderArray = new EmpWageBuilderArray();
+            empWageBuilderArray.AddCompanyEmpWage("DMart", 20, 2, 10);
+            empWageBuilderArray.AddCompanyEmpWage("Relince", 10, 4, 20);
+            empWageBuilderArray.ComputeEmpWage();
             Console.ReadLine();
         }
     }
