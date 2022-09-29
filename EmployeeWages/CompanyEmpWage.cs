@@ -10,7 +10,7 @@ namespace EmployeeWages
     public class CompanyEmpWage
     {
         public string Company;
-        public int EmpratePerHour;
+        public int EmpRatePerHour;
         public int NumOfWorkingDays;
         public int MaxHrsPerMonth;
         public int TotalEmpWage;
@@ -18,7 +18,7 @@ namespace EmployeeWages
         public CompanyEmpWage(string Company, int EmpRatePerHour, int NumOfWorkingDays, int MaxHrsPerMonth)
         {
             this.Company = Company;
-            this.EmpratePerHour = EmpRatePerHour;
+            this.EmpRatePerHour = EmpRatePerHour;
             this.NumOfWorkingDays = NumOfWorkingDays;
             this.MaxHrsPerMonth = MaxHrsPerMonth;
         }
